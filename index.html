@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html style="background-image: url(img/bg_img2.png)">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+    <link href="../images/favicon.ico" rel="bookmark" type="image/x-icon" />
+    <link href="../images/favicon.ico" rel="icon" type="image/x-icon" />
+    <link href="../images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <title>关于财迷</title>
+    
+    <style type="text/css">
+        @-webkit-keyframes top_img {
+            from {
+                background-position: center 710px;
+                opacity: 0;
+            }
+            to {
+                background-position: center 200px;
+                opacity: 1;
+            }
+        }
+        
+        @-webkit-keyframes slideInLeft {
+            from {
+                -webkit-transform: translate3d(-100%, 0, 0);
+                transform: translate3d(-100%, 0, 0);
+                opacity: .1;
+                visibility: visible;
+            }
+            to {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes slideInLeft {
+            from {
+                -webkit-transform: translate3d(-100%, 0, 0);
+                transform: translate3d(-100%, 0, 0);
+                opacity: .1;
+                visibility: visible;
+            }
+            to {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+                opacity: 1;
+            }
+        }
+        
+        .slideInLeft {
+            -webkit-animation-name: slideInLeft;
+            animation-name: slideInLeft;
+        }
+        
+        @-webkit-keyframes slideInRight {
+            from {
+                -webkit-transform: translate3d(100%, 0, 0);
+                transform: translate3d(100%, 0, 0);
+                opacity: .1;
+                visibility: visible;
+            }
+            to {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes slideInRight {
+            from {
+                -webkit-transform: translate3d(100%, 0, 0);
+                transform: translate3d(100%, 0, 0);
+                opacity: .1;
+                visibility: visible;
+            }
+            to {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+                opacity: 1;
+            }
+        }
+        
+        .slideInRight {
+            -webkit-animation-name: slideInRight;
+            animation-name: slideInRight;
+        }
+        
+        .slideInRight,
+        .slideInLeft {
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+        }
+        
+        .animated .slideInRight,
+        .animated .slideInLeft {
+            -webkit-animation-play-state: running;
+            animation-play-state: running;
+        }
+    </style>
+</head>
+<link rel="stylesheet" media="screen and (max-width: 1039px)" href="css/style_middle.css" type="text/css" />
+<link rel="stylesheet" media="screen and (min-width: 1040px)" href="css/style_large.css" type="text/css" />
+<script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script type="text/javascript">
+    try {
+        var urlhash = window.location.hash;
+        if (!urlhash.match("fromapp")) {
+            if ((navigator.userAgent.match(/(iPhone|iPod|Android)/i))) {
+                window.location = "index_mobile.html";
+            }
+        }
+    } catch (err) {}
+</script>
+<script type="text/javascript">
+    $(function goTop() {
+        $("#returnTop").click(function () {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 500, 'easeInOutQuad');
+            return false;
+        });
+    });
+
+    //显示隐藏二维码 
+    function show(i){
+        $('#mask').css('display','block');
+        switch (i){
+            case 1:
+                $('#qr_text').html('打开微信扫一扫，关注即可智能诊股');
+                break;
+                
+            case 2:
+                $('#qr_text').html('打开微信扫一扫，关注财迷自选股')
+                break;
+        }
+    };  
+    function hide(){
+        $('#mask').css('display','none');
+    };
+
+
+    $(function () {
+        $(window).scroll(function () {
+            var yPosition = $(window).scrollTop();
+            if (yPosition > 840) {
+                $('#features_container').animate({
+                    opacity: '1'
+                }, 1500);
+            }
+        })
+    });
+    //    多平台展示动画
+    $(function show_start() {
+        $(window).scroll(function () {
+            var yPosition = $(window).scrollTop();
+            if (yPosition > 1700 && yPosition < 2800) {
+                $('.img_content').addClass('animated')
+            } else {
+                $('.img_content').removeClass('animated')
+            }
+        });
+    });
+    $(function show_nav(){
+        var menu_li=$("#menu ul li ");
+        $(window).scroll(function(){
+          var yPosition = $(window).scrollTop();
+            if(yPosition>550){
+                menu_li .css('background-color','rgba(0,0,0,.7)');
+            }else{
+                menu_li.css('color','white');
+                menu_li.css('background','none');
+            }
+        })
+    });
+
+//    菜单定位
+    $(function(){
+        var body=$("body,html");
+        $(".nav_").each(function(i){
+            $(this).click(function(){
+                //通过拼接字符串获取元素，再取得相对于文档的高度
+                var _top=$($(".menu_position")[i]).offset().top;
+                //scrollTop滚动到对应高度
+                body.animate({scrollTop:_top-60},500);
+            })
+
+        })
+    })
+
+//    菜单栏显示
+//    $('#menu_warp').children().hover(function(){
+//        $(this).css("background","#ff6700");
+//    }),function(){
+//      $(this).css("background","none");
+//    };
+    //鼠标跟随动画
+    //    $(function () {
+    //        $('#mockup_all').on('mousemove', function (e) {
+    //            var s_w = $(window).width();
+    //            var s_h = $(window).height();
+    //            var hx_pos = s_w / 2;
+    //            var vy_pos = s_h / 2;
+    //            var x_pos = e.pageX;
+    //            var y_pos = e.pageY;
+    //            var new_x = -(x_pos - hx_pos) * 0.03;
+    //            var new_y = -(y_pos - vy_pos) * 0.03;
+    //            var yPosition = $(window).scrollTop();
+    //            $('#img_show_bg1').css('left', new_x * 1.5 - 60 + 'px');
+    //            $('#img_show_bg2').css('left', new_x * 3 - 70 + 'px');
+    //            $('#img_show_imac').css('left', new_x * 2 + 200 + 'px');
+    //            $('#img_show_mackbook').css('left', new_x * 0.8 + 400 + 'px');
+    //            $('#img_show_ipad').css('left', new_x * 1 + 40 + 'px');
+    //            $('#img_show_iphone').css('left', new_x * 2.5 + 356 + 'px');
+    ////            console.log('测试');
+    //        });
+    //    })
+</script>
+
+<body>
+    <header>
+        <div class="nav_bar" style="background-image: url(img/bg_img2.png);background-repeat: no-repeat;background-position: top center;background-size: auto;">
+            <div class="bg_opaccity"></div>
+            <div class="nav_bound">
+                <div class="web_logo"></div>
+                <ul class="nav">
+                    <li><a class="nav_links" href="index.html">首页</a></li>
+                    <li><a class="nav_links" href="help.html">帮助</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="top_box">
+            <img id="slogan" src="img/slogan.svg" />
+            <table class="search">
+                <tr>
+                    <td>
+                        <!-- <div class="search_box">
+                            <div class="icon">
+                                <img class="ic_search" src="img/ic_search.svg" />
+                            </div>
+                            <input type="text" placeholder="上证指数 000001" class="input" disabled />
+                        </div> -->
+                    </td>
+                    <!-- <td style="width:120px;">
+                        <a class="go_search" href="http://58caimi.com/stock?stockid=000001.SS" target="_blank">马上体验</a>
+                    </td> -->
+                </tr>
+            </table>
+        </div>
+    </header>
+    <nav>
+        <div id="menu">
+            <ul id="menu_warp">
+                <li id="nav_1" class="nav_"><span style="text-align: center">特色功能</span></li>
+                <li id="nav_2" class="nav_"><span>全平台支持</span></li>
+                <li id="nav_3" class="nav_"><span>财迷客户端</span></li>
+            </ul>
+        </div>
+    </nav>
+    <div id="container">
+        <div class="present">
+            <div class="present_title" style="width:80px">财迷</div>
+            财迷在线行情系统是一个基于HTML5技术的新一代证券信息平台，不用下载安装，打开网页即可使用，自适应各种屏幕和设备，媲美传统炒股软件，让您随时随地获取最新行情信息。财迷将为您提供优质的数据服务，包括无延迟的实时数据，丰富的数据可视化工具，以及基于海量新闻、社交、舆情数据和人工智能技术的量化策略和技术指标，帮助您更好地寻找投资机会。
+        </div>
+        <div class="features_container menu_position" id="features_container">
+            <div class="desc_title">
+                <span class="title">特色功能</span>
+                <!--<span class="desc">6大专业、实时、高效功能助力遨游股海</span>-->
+            </div>
+            <div class="features" style="cursor:pointer" onclick="window.open('http://58caimi.com/indexView/')">
+                <div class="hover_change">
+                    <div class="car_normal">
+                        <img class="feat_ic" src="img/ic_quotes.svg" />
+                        <div class="feat_title_cn">实时行情</div>
+                        <div class="feat_title_en">Real Time Quotes</div>
+                    </div>
+                    <div class="car_hover">
+                        <img class="feat_ic" src="img/ic_quotes_w.svg" />
+                        <div class="feat_desc" style="color:#fff;font-size:16px;line-height:200%;margin:0 20px;">交易所数据直达，无延迟，秒级刷新频率</div>
+                    </div>
+                </div>
+            </div>
+            <div class="features" style="cursor:pointer" onclick="window.open('http://58caimi.com/stock?stockid=000001.SS&interval=quoteSec15')">
+                <div class="hover_change">
+                    <div class="car_normal">
+                        <img class="feat_ic" src="img/ic_candleline.svg" />
+                        <div class="feat_title_cn">15秒极速K线</div>
+                        <div class="feat_title_en">Live Stock Charts</div>
+                    </div>
+                    <div class="car_hover">
+                        <img class="feat_ic" src="img/ic_candleline_w.svg" />
+                        <div class="feat_desc" style="color:#fff;font-size:16px;line-height:200%;margin:0 20px;">更细切片，短线操盘手的福利</div>
+                    </div>
+                </div>
+            </div>
+            <div class="features" style="cursor:pointer" onclick="window.open('http://www.58caimi.com/treemap?type=GN')">
+                <div class="hover_change">
+                    <div class="car_normal">
+                        <img class="feat_ic" src="img/ic_heatmap.svg" />
+                        <div class="feat_title_cn">实时热力地图</div>
+                        <div class="feat_title_en">Market Heat Map</div>
+                    </div>
+                    <div class="car_hover">
+                        <img class="feat_ic" src="img/ic_heatmap_w.svg" />
+                        <div class="feat_desc" style="color:#fff;font-size:16px;line-height:200%;margin:0 20px;">让股市动态一目了然</div>
+                    </div>
+                </div>
+            </div>
+            <div class="features" style="cursor:pointer" onclick="window.open('http://58caimi.com/stock?stockid=000001.SS')">
+                <div class="hover_change">
+                    <div class="car_normal">
+                        <img class="feat_ic" src="img/ic_keygenius.svg" />
+                        <div class="feat_title_cn">按键精灵</div>
+                        <div class="feat_title_en">Keyboard Operation</div>
+                    </div>
+                    <div class="car_hover">
+                        <img class="feat_ic" src="img/ic_keygenius_w.svg" />
+                        <div class="feat_desc" style="color:#fff;font-size:16px;line-height:200%;margin:0 20px;">全面支持股票软件键盘命令，体验飞速的键盘操作</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="features" style="cursor:pointer" onclick="window.open('http://58caimi.com/stock?stockid=000001.SS')">
+                <div class="hover_change">
+                    <div class="car_normal">
+                        <img class="feat_ic" src="img/ic_shareplatform.svg" />
+                        <div class="feat_title_cn">股票池订阅</div>
+                        <div class="feat_title_en">Watchlists</div>
+                    </div>
+                    <div class="car_hover">
+                        <img class="feat_ic" src="img/ic_shareplatform_w.svg" />
+                        <div class="feat_desc" style="color:#fff;font-size:16px;line-height:200%;margin:0 20px;">随时获知专家的股票池动态</div>
+                    </div>
+                </div>
+            </div>
+            <div class="features" style="cursor:pointer" onclick="window.open('http://58caimi.com/stock?stockid=000001.SS')">
+                <div class="hover_change">
+                    <div class="car_normal">
+                        <img class="feat_ic" src="img/ic_techcal.svg" />
+                        <div class="feat_title_cn">独家操盘策略</div>
+                        <div class="feat_title_en">Trading Strategies</div>
+                    </div>
+                    <div class="car_hover">
+                        <img class="feat_ic" src="img/ic_techcal_w.svg" />
+                        <div class="feat_desc">财迷大数据分析团队持续为您打造更好的操盘策略</div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="features" style="cursor:pointer" id="diagnosis" onclick="show(1)">
+                <div class="hover_change">
+                    <div class="car_normal">
+                        <img class="feat_ic" src="img/ic_diagnosis.svg" />
+                        <div class="feat_title_cn">智能诊股</div>
+                        <div class="feat_title_en">Stock Diagnostics</div>
+                    </div>
+                    <div class="car_hover">
+                        <img class="feat_ic" src="img/ic_diagnosis_w.svg" />
+                        <div class="feat_desc" style="color:#fff;font-size:16px;line-height:200%;margin:0 20px;">随时随地查看个股走势分析及仓位建议</div>
+                    </div>
+                </div>
+            </div>
+            <div class="features" style="cursor:pointer" id="multi" onclick="show(2)">
+                <div class="hover_change" style="position:relative">
+                    <div class="car_normal">
+                        <img class="feat_ic" src="img/ic_multi_platform.svg" />
+                        <div class="feat_title_cn">全平台支持</div>
+                        <div class="feat_title_en">Multi-platform Surpport</div>
+                    </div>
+                    <div class="car_hover">
+                        <img class="feat_ic" src="img/ic_multi_platform_w.svg" />
+                        <div class="feat_desc" style="color:#fff;font-size:16px;line-height:200%;margin:0 20px;">全面支持PC、平板、移动端访问</div>
+                    </div>
+                </div>
+            </div>
+            <div class="features">
+                <div class="hover_change">
+                    <div class="car_normal">
+                        <img class="feat_ic" />
+                        <div class="feat_title_cn" style="padding-top:58px;">敬请期待...</div>
+                        <div class="feat_title_en">Coming Soon</div>
+                    </div>
+                    <div class="car_hover">
+                        <img class="feat_ic" src="img/ic_caimi_w.svg" />
+                        <div class="feat_desc" style="color:#fff;font-size:16px;line-height:200%;margin:0 20px;">更多功能，敬请期待...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mockup_all menu_position" id="mockup_all">
+            <div class="desc_title">
+                <span class="title">全平台支持</span>
+<!--                <span class="desc">全面支持桌面、平板、手机端，免安装随时随地关注股市动态</span>-->
+            </div>
+            <div class="img_content">
+                <img id="img_show_bg1" src="img/bg_img_1.png" />
+                <img id="img_show_bg2" src="img/bg_img_2.png" />
+                <img id="img_show_imac" class="slideInRight" src="img/img_show_iMack.png" />
+                <img id="img_show_mackbook" class="slideInRight" src="img/img_show_macbook.png" />
+                <img id="img_show_ipad" class="slideInLeft" src="img/img_show_iPad.png" />
+                <img id="img_show_iphone" class="slideInRight" src="img/img_show_phone.png" />
+            </div>
+        </div>
+        <div class="interface_show menu_position" style="margin-top:100px">
+        <p class="title">财迷客户端</p>
+        <p class="_desc">财迷客户端是一款基于HTML5技术的在线行情软件，用户安装我们的客户端之后可以不依赖于浏览器，无需输入网址，运行即可完美体验我们的在线行情系统。</p>
+        <div class="dl_content">
+            <div class="dlbox" style="margin-right:40px">
+                <img src="img/img_dl_win.png" alt="财迷 For Windows" class="dl_img">
+                <div class="s_detail">
+                    <div class="s_name">财迷 For Windows</div>
+                    <p class="_info">
+                        操作系统：Win7/Win8/Win10
+                        <br/> 软件语言：简体中文
+                        <br/> 软件体积：43.7MB
+                        <br/> 版本号：1.0
+                        <br/> 发布日期：2016年3月20日
+                    </p>
+                    <a href="#" class="go_dl" style="float:left;margin-top:10px;width:120px;">下载</a>
+                </div>
+            </div>            
+               <div class="dlbox">
+                <img src="img/img_dl_os.png" alt="财迷 For Mac OS" class="dl_img">
+                <div class="s_detail">
+                    <div class="s_name">财迷 For Mac OS</div>
+                    <p class="_info">
+                        操作系统：Mac OS 10.9及以上
+                        <br/> 软件语言：简体中文
+                        <br/> 软件体积：47.6MB
+                        <br/> 版本号：1.0
+                        <br/> 发布日期：2016年3月20日
+                    </p>
+                    <a href="#" class="go_dl" style="float:left;margin-top:10px;width:120px;">下载</a>
+                </div>
+            </div>            
+        </div>
+        </div>
+        <div class="present">
+            <div class="present_title">公司介绍</div>
+            财迷网络致力于为证券投资者和服务者提供好用的工具，包括数据分析工具、可视化工具以及交流协作工具。方便人们更加高效的获取信息，重塑内容的产生、交流、分享和传播方式。我们的愿景是用技术来驱动金融，做可计算金融、可视化金融、智慧互联金融。我们是一支有工匠精神的团队，拥有最酷的程序员和设计师，将共同打造一款优美的产品，服务千千万万的用户。
+        </div>
+
+        <div class="mask" id="mask" onclick="hide()">
+            <div class="qr_dialog">
+                <img class="qr_img" src="img/wechat.png" />
+                <img class="close" ic="close" src="img/ic_close.svg" style="cursor:pointer" onclick="hide() " />
+                <p id="qr_text" style="color:#515d6b;font-size:14px;
+                          margin-bottom:40px;">打开微信扫一扫，关注即可智能诊股</p>
+            </div>
+
+        </div>
+    </div>
+    <footer>
+        <div class="footer_content">
+            <p class="contact_info">
+                <div class="_top" id="returnTop">
+                    <img class="rocket_img" src="img/ic_roket.svg" />
+                </div>
+                <p class="contact_info">
+                    联系我们：
+                    <br/> service@58caimi.com
+                    <br/> 粤ICP备16000647号-1
+                    <br/> CopyRight© 财迷网络 2015 版权所有
+                </p>
+                <!-- <div class="qrcode_box">
+                    <div class="qrcode">
+                        <img class="qrcode_img" src="img/wechat.png" />
+                        <span style="display:block">微信公众号</span>
+                    </div>
+
+                </div> -->
+        </div>
+    </footer>
+</body>
+
+</html>

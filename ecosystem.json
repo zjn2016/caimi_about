@@ -1,0 +1,15 @@
+{
+  "deploy": {
+    "production": {
+      "user": "nodejs",
+      "host": ["101.201.153.233", "101.201.197.191"],
+      "ref": "origin/master",
+      "repo": "git@github.com:caimiwangluo/caimi_about.git",
+      "path": "/app/caimi_nodeJS/repo/caimi_about",
+      "post-deploy": "git lg -10",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
+  }
+}

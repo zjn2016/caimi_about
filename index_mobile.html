@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html style="background-image: url(img/bg_img2.png)">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+    <link href="../images/favicon.ico" rel="bookmark" type="image/x-icon" />
+    <link href="../images/favicon.ico" rel="icon" type="image/x-icon" />
+    <link href="../images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <title>关于财迷</title>
+    <style type="text/css">
+        
+        @-webkit-keyframes top_img {
+            from{
+                background-position: center 40rem;
+                opacity: 0;
+            }
+            to{
+                background-position: center 12rem;
+                opacity: 1;
+            }
+        }
+        
+        @-webkit-keyframes slideInLeft {
+            from {
+                -webkit-transform: translate3d(0,-100%, 0);
+                transform: translate3d(0, 100%, 0);
+                opacity: .1;
+                visibility: visible;
+            }
+            to {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes slideInLeft {
+            from {
+                -webkit-transform: translate3d(0, 100%, 0);
+                transform: translate3d(0,-100%, 0);
+                opacity: .1;
+                visibility: visible;
+            }
+            to {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+                opacity: 1;
+            }
+        }
+        
+        .slideInLeft {
+            -webkit-animation-name: slideInLeft;
+            animation-name: slideInLeft;
+        }
+        
+        @-webkit-keyframes slideInRight {
+            from {
+                -webkit-transform: translate3d(0, -100%, 0);
+                transform: translate3d(0, 100%, 0);
+                opacity: .1;
+                visibility: visible;
+            }
+            to {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes slideInRight {
+            from {
+                -webkit-transform: translate3d(0, 100%, 0);
+                transform: translate3d(0, 100%, 0);
+                opacity: .1;
+                visibility: visible;
+            }
+            to {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+                opacity: 1;
+            }
+        }
+        
+        .slideInRight {
+            -webkit-animation-name: slideInRight;
+            animation-name: slideInRight;
+        }
+        
+        .slideInRight,
+        .slideInLeft {
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+        }
+        
+        .animated .slideInRight,
+        .animated .slideInLeft {
+            -webkit-animation-play-state: running;
+            animation-play-state: running;
+        }
+    </style>
+</head>
+<link rel="stylesheet" href="css/style_small.css" type="text/css" />
+<script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script type="text/javascript">
+    $(function goTop() {
+
+        $("#returnTop").click(function () {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 500, 'easeInOutQuad');
+            return false;
+        });
+    })
+
+    $(function () {
+        $(window).scroll(function () {
+            var yPosition = $(window).scrollTop();
+            if (yPosition > 400) {
+                $('#features_container').animate({
+                    opacity: '1'
+                }, 1500);
+            }
+        })
+    });
+    //    多平台展示动画
+    $(function show_start() {
+        $(window).scroll(function () {
+            var yPosition = $(window).scrollTop();
+            if (yPosition > 700 && yPosition < 1800) {
+                $('.img_content').addClass('animated')
+            } else {
+                $('.img_content').removeClass('animated')
+            }
+        })
+    });
+
+    //鼠标跟随动画
+//    $(function () {
+//        $('#mockup_all').on('mousemove', function (e) {
+//            var s_w = $(window).width();
+//            var s_h = $(window).height();
+//            var hx_pos = s_w / 2;
+//            var vy_pos = s_h / 2;
+//            var x_pos = e.pageX;
+//            var y_pos = e.pageY;
+//            var new_x = -(x_pos - hx_pos) * 0.03;
+//            var new_y = -(y_pos - vy_pos) * 0.03;
+//            var yPosition = $(window).scrollTop();
+//            $('#img_show_bg1').css('left', new_x * 1.5 - 60 + 'px');
+//            $('#img_show_bg2').css('left', new_x * 3 - 70 + 'px');
+//            $('#img_show_imac').css('left', new_x * 2 + 200 + 'px');
+//            $('#img_show_mackbook').css('left', new_x * 0.8 + 400 + 'px');
+//            $('#img_show_ipad').css('left', new_x * 1 + 40 + 'px');
+//            $('#img_show_iphone').css('left', new_x * 2.5 + 356 + 'px');
+////            console.log('测试');
+//        });
+//    })
+</script>
+
+<body>
+    <header>
+        <div class="nav_bar" style="background-image: url(img/bg_img2.png);background-repeat: no-repeat;background-position: top center;background-size: auto;">
+            <div class="bg_opaccity"></div>
+            <div class="nav_bound">
+                <div class="web_logo"></div>
+                <ul class="nav">
+                    <li><a class="nav_links" href="index.html">首页</a></li>
+                    <li><a class="nav_links" href="help.html">帮助</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="top_box">
+            <img id="slogan" src="img/slogan.svg" />
+            <table class="search">
+                <tr>
+                    <!-- <td>
+                        <div class="search_box">
+                            <div class="icon">
+                                <img class="ic_search" src="img/ic_search.svg" />
+                            </div>
+                            <input type="text" placeholder="上证指数 000001" class="input" disabled />
+                        </div>
+                    </td>
+                    <td style="width:10rem;">
+                        <a class="go_search" href="http://58caimi.com/stock?stockid=000001.SS" target="_blank">马上体验</a>
+                    </td> -->
+                </tr>
+            </table>
+        </div>
+    </header>
+    <div id="container">
+        <div class="present">
+            <div class="present_title">财迷</div>
+            财迷在线行情系统是一个基于HTML5技术的新一代证券信息平台，不用下载安装，打开网页即可使用，自适应各种屏幕和设备，媲美传统炒股软件，让您随时随地获取最新行情信息。财迷将为您提供优质的数据服务，包括无延迟的实时数据，丰富的数据可视化工具，以及基于海量新闻、社交、舆情数据和人工智能技术的量化策略和技术指标，帮助您更好地寻找投资机会。
+        </div>
+        <div class="features_container" id="features_container">
+            <div class="desc_title">
+                <span class="title">特色功能</span>
+                <!--<span class="desc">6大专业、实时、高效功能助力遨游股海</span>-->
+            </div>
+            <div class="features" >
+                <div class="hover_change">
+                    <div class="car_normal" style="background-color:#eee">
+                        <img class="feat_ic" src="img/ic_quotes.svg" />
+                        <div class="feat_title_cn">实时行情</div>
+                        <div class="feat_title_en">Real Time Quotes</div>
+                    </div>
+                    <div class="car_hover">
+                        <img class="feat_ic" src="img/ic_quotes_w.svg" />
+                        <div class="feat_desc">交易所数据直达，无延迟，秒级刷新频率</div>
+                    </div>
+                </div>
+            </div>
+            <div class="features" >
+                <div class="hover_change">
+                    <div class="car_normal">
+                        <img class="feat_ic" src="img/ic_candleline.svg" />
+                        <div class="feat_title_cn">15秒极速K线</div>
+                        <div class="feat_title_en">Live Stock Charts</div>
+                    </div>
+                    <div class="car_hover">
+                        <img class="feat_ic" src="img/ic_candleline_w.svg" />
+                        <div class="feat_desc">更细切片，短线操盘手的福利</div>
+                    </div>
+                </div>
+            </div>
+            <div class="features" >
+                <div class="hover_change">
+                    <div class="car_normal">
+                        <img class="feat_ic" src="img/ic_heatmap.svg" />
+                        <div class="feat_title_cn">实时热力地图</div>
+                        <div class="feat_title_en">Market Heat Map</div>
+                    </div>
+                    <div class="car_hover">
+                        <img class="feat_ic" src="img/ic_heatmap_w.svg" />
+                        <div class="feat_desc">让股市动态一目了然</div>
+                    </div>
+                </div>
+            </div>
+            <div class="features" >
+                <div class="hover_change">
+                    <div class="car_normal">
+                        <img class="feat_ic" src="img/ic_keygenius.svg" />
+                        <div class="feat_title_cn">按键精灵</div>
+                        <div class="feat_title_en">Keyboard Operation</div>
+                    </div>
+                    <div class="car_hover">
+                        <img class="feat_ic" src="img/ic_keygenius_w.svg" />
+                        <div class="feat_desc">全面支持股票软件键盘命令，体验飞速的键盘操作</div>
+                    </div>
+                </div>
+            </div>
+            <div class="features" >
+                <div class="hover_change">
+                    <div class="car_normal">
+                        <img class="feat_ic" src="img/ic_shareplatform.svg" />
+                        <div class="feat_title_cn">股票池订阅</div>
+                        <div class="feat_title_en">Watchlists</div>
+                    </div>
+                    <div class="car_hover">
+                        <img class="feat_ic" src="img/ic_shareplatform_w.svg" />
+                        <div class="feat_desc">随时获知专家的股票池动态</div>
+                    </div>
+                </div>
+            </div>
+            <div class="features" >
+                <div class="hover_change">
+                    <div class="car_normal">
+                        <img class="feat_ic" src="img/ic_techcal.svg" />
+                        <div class="feat_title_cn">独家操盘策略</div>
+                        <div class="feat_title_en">Trading Strategies</div>
+                    </div>
+                    <div class="car_hover">
+                        <img class="feat_ic" src="img/ic_techcal_w.svg" />
+                        <div class="feat_desc">财迷大数据分析团队持续为您打造更好的操盘策略</div>
+                    </div>
+                </div>
+            </div>
+                        
+            <div class="features" >
+                <div class="hover_change">
+                    <div class="car_normal">
+                        <img class="feat_ic" src="img/ic_diagnosis.svg" />
+                        <div class="feat_title_cn">智能诊股</div>
+                        <div class="feat_title_en">Stock Diagnostics</div>
+                    </div>
+                    <div class="car_hover">
+                        <img class="feat_ic" src="img/ic_diagnosis_w.svg" />
+                        <div class="feat_desc">随时随地查看个股走势分析及仓位建议</div>
+                    </div>
+                </div>
+            </div>            
+            <div class="features" >
+                <div class="hover_change">
+                    <div class="car_normal">
+                        <img class="feat_ic" src="img/ic_multi_platform.svg" />
+                        <div class="feat_title_cn">全平台支持</div>
+                        <div class="feat_title_en">Multi-platform Surpport</div>
+                    </div>
+                    <div class="car_hover">
+                        <img class="feat_ic" src="img/ic_multi_platform_w.svg" />
+                        <div class="feat_desc">全面支持PC、平板、移动端访问</div>
+                    </div>
+                </div>
+            </div>            
+            <div class="features" >
+                <div class="hover_change">
+                    <div class="car_normal">
+<!--                        <img class="feat_ic" src="img/ic_shareplatform.svg" />-->
+                        <div class="feat_title_cn" style="padding-top:4rem;">敬请期待...</div>
+                        <div class="feat_title_en">Coming Soon</div>
+                    </div>
+                    <div class="car_hover">
+                        <img class="feat_ic" src="img/ic_caimi_w.svg" />
+                        <div class="feat_desc">更多功能，敬请期待...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mockup_all" id="mockup_all">
+            <div class="desc_title">
+<!--                <span class="title">全平台支持</span>-->
+                <!--<span class="desc">全面支持桌面、平板、手机端，免安装随时随地关注股市动态</span>-->
+            </div>
+            <div class="img_content">
+                <img id="img_show_bg1" src="img/bg_img_1.png" />
+                <img id="img_show_bg2" src="img/bg_img_2.png" />
+                <img id="img_show_imac" class="slideInRight" src="img/img_show_iMack.png" />
+                <img id="img_show_mackbook" class="slideInRight" src="img/img_show_macbook.png" />
+                <img id="img_show_ipad" class="slideInLeft" src="img/img_show_iPad.png" />
+                <img id="img_show_iphone" class="slideInRight" src="img/img_show_phone.png" />
+            </div>
+        </div>
+        <!--
+        <div class="interface_show">
+            <div class="desc_title">
+                <span class="title" style="margin-top:80px;">界面展示</span>
+                <span class="desc">6大专业、实时、高效功能助力</span>
+            </div>
+            <div class="show_box">
+                <img class="show_img" src="img/img_show_1.png" />
+            </div>
+            <div class="show_tab">
+                <ul style="display:inline-block">
+                    <li class="tab_menu" onclick="#">
+                        <div class="tab_selector"></div><span class="tab_menu_text">个股首页</span> </li>
+                    <li class="tab_menu" onclick="#">
+                        <div class="tab_selector"></div><span class="tab_menu_text">全景排行</span> </li>
+                    <li class="tab_menu" onclick="#">
+                        <div class="tab_selector"></div><span class="tab_menu_text">行情报价</span> </li>
+                    <li class="tab_menu" onclick="#">
+                        <div class="tab_selector"></div><span class="tab_menu_text">热力地图</span> </li>
+                </ul>
+            </div>
+        </div>
+-->
+    </div>
+    <footer>
+        <div class="footer_content">
+            <p class="contact_info">
+            <div class="_top" id="returnTop" onclick="goTop()">
+                <img class="rocket_img" src="img/ic_roket.svg" />
+            </div>
+            <p class="contact_info">
+                联系我们：
+                <br/> service@58caimi.com
+                <br/> 粤ICP备16000647号-1
+                <br/> CopyRight© 财迷网络 2015 版权所有
+            </p>
+            <!-- <div class="qrcode_box">
+                <div class="qrcode">
+                    <img class="qrcode_img" src="img/wechat.png" />
+                    <span style="display:block">微信公众号</span>
+                </div>
+
+            </div> -->
+        </div>
+    </footer>
+</body>
+
+</html>

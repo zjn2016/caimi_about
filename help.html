@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html style="background-image: url(img/bg_img2.png);min-width:800px">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+    <link href="../images/favicon.ico" rel="bookmark" type="image/x-icon" />
+    <link href="../images/favicon.ico" rel="icon" type="image/x-icon" />
+    <link href="../images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <title>财迷在线行情系统用户手册</title>
+    <style type="text/css">
+        html {
+            background: #fff!important;
+        }
+        
+        body {
+            margin-top: 40px;
+        }
+        
+        a:link,
+        a:hover,
+        a:active,
+        a:visited {
+            text-decoration: none;
+        }
+        
+        @-webkit-keyframes top_img {
+            from {
+                background-position: center 710px;
+                opacity: 0;
+            }
+            to {
+                background-position: center 200px;
+                opacity: 1;
+            }
+        }
+        
+        .menu {
+            color: #515d6b;
+            text-align: left;
+            text-indent: 16px;
+            font-size: 16px!important;
+            text-decoration: none;
+            cursor: pointer;
+            line-height: 20px;
+            margin: 12px auto;
+            border-left: solid hsla(0, 0%, 0%, 0) 4px;
+        }
+        
+        .list_menu {
+            width: 100%;
+            text-indent: 12px;
+            color: #94a3ab;
+            text-decoration: none;
+            list-style: none;
+            font-size: 14px;
+            line-height: 20px;
+            margin: 12px 0 10px 20px;
+            border-left: solid hsla(0, 0%, 0%, 0) 4px;
+            cursor: pointer;
+            z-index: -999;
+        }
+        
+        .navigation {
+            /*            display: inline-block;*/
+            height: 100%;
+            list-style: none;
+            color: #515d6b;
+            line-height: 24px;
+            margin-right: 20px;
+            width: 180px;
+            text-align: left;
+        }
+        
+        .navigation li {
+            margin: 12px 0px;
+            font-size: 14px;
+            cursor: pointer;
+            border-left: solid #fff 4px;
+        }
+        
+        .cur {
+            color: #379BDD;
+            border-left: solid #379BDD 4px!important;
+        }
+        
+        .left_nav {
+            width: 192px;
+            height: 100vh;
+            float: left;
+            margin-bottom: 120px;
+            position: fixed;
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+        
+        .ulist {
+            width: 100%;
+            display: none;
+            text-align: left;
+        }
+        
+        ._content {
+            display: block;
+            top: 0px;
+            width: 79%;
+            float: right;
+            border-left: solid #f1f3f4 1px;
+            padding: 20px 0;
+        }
+        
+        .help_content {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            padding-bottom: 80px;
+            margin-top: 10px;
+        }
+        
+        h1 {
+            color: #07182C;
+            font-size: 24px;
+            font-weight: normal;
+            line-height: 200%;
+            /*            padding-bottom: 20px;*/
+        }
+        
+        h2 {
+            color: #07182C;
+            font-size: 20px;
+            font-weight: normal;
+            line-height: 200%;
+            text-align: left;
+            padding-left: 40px;
+            padding-top: 48px;
+        }
+        
+        ._desc {
+            color: #515d6b;
+            font-size: 14px;
+            line-height: 180%;
+            letter-spacing: 2px;
+            padding: 0 40px;
+            text-align: justify;
+            padding-bottom: 40px;
+        }
+        
+        .target-fix {
+            position: relative;
+            top: -48px; // 偏移值
+            display: block;
+            height: 0;
+            overflow: hidden;
+        }
+        
+        .desc_img {
+            width: 84%;
+            margin: 0 40px;
+        }
+        
+        .keyset {
+            width: 100%;
+        }
+        
+        .keyset_th {
+            width: 120px;
+        }
+    </style>
+</head>
+<link rel="stylesheet" media="screen and (max-width: 1039px)" href="css/style_middle.css" type="text/css" />
+<link rel="stylesheet" media="screen and (min-width: 1040px)" href="css/style_large.css" type="text/css" />
+<script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script type="text/javascript">
+    //    try {
+    //        var urlhash = window.location.hash;
+    //        if (!urlhash.match("fromapp")) {
+    //            if ((navigator.userAgent.match(/(iPhone|iPod|Android)/i))) {
+    //                window.location = "index_mobile.html";
+    //            }
+    //        }
+    //    } catch (err) {}
+</script>
+<script type="text/javascript">
+    $(function() {
+        $("#returnTop").click(function() {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 500, 'easeInOutQuad');
+            return false;
+        });
+    });
+    $(document).ready(function() {
+        $('#menu_1').addClass('cur');
+        $('.list_menu').click(function() {
+            $('.list_menu').removeClass('cur');
+            $('.menu').removeClass('cur');
+            $(this).addClass('cur');
+        });
+
+        $('.n_list').click(function() {
+            $('.list_menu').removeClass('cur');
+            $('.menu').removeClass('cur');
+            $(this).addClass('cur');
+        });
+    });
+
+    function show_menu(i) {
+        switch (i) {
+            case 2:
+                $("#ul_2").toggle();
+                break;
+            case 3:
+                $("#ul_3").toggle();
+                break;
+            case 4:
+                $("#ul_4").toggle();
+                break;
+        }
+    };
+    $(window).scroll(function() {
+        var yPosition = $(window).scrollTop() + 48;
+        var sels = ['#c1', '#c2', '#c3', '#c4', '#c5', '#c6', '#c7', '#c8', '#c9', '#c10', '#c11', '#c12', '#c13', '#c14', '#c15', '#c16', '#c17', '#c18', '#c19', '#c20'];
+        for (var i = 0; i < sels.length; i++) {
+            var c = Math.abs(yPosition - $(sels[i]).offset().top);
+            if (c > 0 && c < 100) {
+                $(".slected_id").eq(i).parent().show();
+                $('.slected_id').removeClass('cur');
+                $(".slected_id").eq(i).addClass('cur');
+            }
+        }
+    })
+
+    $(window).load(function() {
+        $('.left_nav ul').hide();
+    });
+</script>
+
+<body>
+    <header>
+        <div class="nav_bar" style="background-image: url(img/bg_img2.png);background-repeat: no-repeat;background-position: top center;background-size: auto;">
+            <div class="bg_opaccity"></div>
+            <div class="nav_bound">
+                <div class="web_logo"></div>
+                <ul class="nav">
+                    <li><a class="nav_links" href="index.html">首页</a></li>
+                    <li><a class="nav_links" href="help.html">帮助</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div id="container" style="min-height:100vh;position:relative;padding-top:48px;">
+        <div class="help_content">
+            <div class="left_nav">
+                <div class="menu n_list slected_id" id="menu_1" onclick="window.location.href='#c1'">界面介绍</div>
+                <div class="menu" onclick="show_menu(2)">主功能区</div>
+                <ul class="ulist" id="ul_2">
+                    <li class="list_menu slected_id" onclick="window.location.href='#c2'">热力地图</li>
+                    <li class="list_menu slected_id" onclick="window.location.href='#c3'">行情报价</li>
+                    <li class="list_menu slected_id" onclick="window.location.href='#c4'">全景排行</li>
+                </ul>
+                <div class="menu" onclick="show_menu(3)">自选股介绍</div>
+                <ul class="ulist" id="ul_3">
+                    <li class="list_menu slected_id" onclick="window.location.href='#c5'">自选股导入</li>
+                    <li class="list_menu slected_id" onclick="window.location.href='#c6'">添加自选股</li>
+                    <li class="list_menu slected_id" onclick="window.location.href='#c7'">自选股分组</li>
+                    <li class="list_menu slected_id" onclick="window.location.href='#c8'">删除、移动、复制</li>
+                    <li class="list_menu slected_id" onclick="window.location.href='#c9'">分享自选股分组</li>
+                    <li class="list_menu slected_id" onclick="window.location.href='#c10'">关注他人自选股</li>
+                    <li class="list_menu slected_id" onclick="window.location.href='#c11'">新闻、公告、研报</li>
+                    <li class="list_menu slected_id" onclick="window.location.href='#c12'">备注功能</li>
+                </ul>
+                <div class="menu" onclick="show_menu(4)">个股页面</div>
+                <ul class="ulist" id="ul_4">
+                    <li class="list_menu slected_id" onclick="window.location.href='#c13'">工具栏</li>
+                    <li class="list_menu slected_id" onclick="window.location.href='#c14'">添加指标或折叠指标</li>
+                    <li class="list_menu slected_id" onclick="window.location.href='#c15'">修改指标</li>
+                    <li class="list_menu slected_id" onclick="window.location.href='#c16'">K线图交互</li>
+                    <li class="list_menu slected_id" onclick="window.location.href='#c17'">个股信息栏</li>
+                    <li class="list_menu slected_id" onclick="window.location.href='#c18'">基本面分析</li>
+                </ul>
+                <div class="menu n_list slected_id" onclick="window.location.href='#c19'">按键精灵</div>
+                <div class="menu n_list slected_id" style="margin-bottom:80px" onclick="window.location.href='#c20'">通信功能</div>
+            </div>
+            <div class="_content">
+                <h1>欢迎来到财迷</h1>
+                <p class="_desc" style="padding-bottom: 0px;">
+                    财迷是一款新一代证券行情系统，提供优质的A股实时行情数据服务，包括无延迟的实时数据，更精细的k线切片，丰富的数据可视化工具，如热力地图，帮助您快速把握热点板块和热门股票，以及基于大数据和人工智能技术的独家技术指标，帮助您更好地把握投资机会。财迷行情系统还拥有非常好用的自选股工具，您可以通过复制粘贴文字或图片轻松将其他软件中的自选股导入进财迷系统，对自选股进行分组管理。您还可以方便地分享和订阅自选股，同步好友的自选股变化。财迷行情系统支持多设备互联，包括web客户端、Windows端、Mac端以及手机端，让您随时随地查看自选股动态。
+                </p>
+                <a class="target-fix" name="c1"></a>
+                <h2 id="c1">界面介绍</h2>
+                <p class="_desc">
+                    我们的主界面由 A、主功能区；B、自选股面板；C、扩展功能；D、导航搜索面板4个区域组成
+                </p>
+                <img class="desc_img" src="img/help/h_img_01.png" />
+                <p class="_desc" style="padding-bottom:20px;">
+                    <b>A、主功能区</b>
+                    <br/>这里是财迷的核心功能区，在不同的页面这里将呈现不同的内容，包括行情报价、全景排行、热力地图、个股的k线图及基本面数据等。
+                    <br/> <b>B、自选股面板</b>
+                    <br/> 这里是您关注的自选股，您可以对自选股进行分组管理，还可以关注别人的自选股
+                    <br/> <b>C、扩展功能</b>
+                    <br/> 这里是除了基本功能之外扩展功能的入口面板，例如目前的通信功能入口，后续会陆续增加其他扩展功能。
+                    <br/> <b>D、导航搜索面板</b>
+                    <br/> 导航搜索面板包括主要功能页面的导航以及快速搜索，您通过键盘按键即可快速搜索定位相应页面。
+                </p>
+                <a class="target-fix" name="c2"></a>
+                <h2 id="c2">热力地图</h2>
+                <p class="_desc">
+                    A、热力地图的颜色深浅代表涨跌幅度，涨幅越大的颜色越红，面积与流通市值正相关，您可以通过热力地图迅速把握市场状况；
+                    <br/>B、热力地图分为概念地图、行业地图、地域地图和证监会行业地图，您可以通过左侧的tab切换；
+                    <br/>C、在某个地图里（如概念地图），点击某个概念，地图会进入该概念，显示该概念包含的所有股票。点击地图上方的导航条即可退回到全部概念。
+                </p>
+                <img src="img/help/h_img_02.png" class="desc_img" />
+                <a class="target-fix" name="c3"></a>
+                <h2 id="c3">行情报价</h2>
+                <p class="_desc">
+                    在行情报价页面您可以浏览不同分类的股票，可以通过点击表头进行排序。
+                </p>
+                <img src="img/help/h_img_03.png" class="desc_img" />
+                <a class="target-fix" name="c4"></a>
+                <h2 id="c4">全景排行</h2>
+                <p class="_desc">
+                    在全景排行页面您可以查看大盘指数的实时行情以及个股、概念、行业的涨幅榜。
+                </p>
+                <img src="img/help/h_img_04.png" class="desc_img" />
+                <a class="target-fix" name="c5"></a>
+                <h2 id="c5">自选股导入</h2>
+                <p class="_desc">
+                    点击自选股面板的菜单按钮 > 导入自选股，在弹出的对话窗口中，您可以通过两种方式导入自选股：
+                    <br/>A、导入文本：粘贴一段包含股票编号、名称等信息的文本，系统将自动识别其中的股票，将其添加至当前分组；
+                    <br/>B、导入图片：上传一张含有股票代码的图片，系统将通过图像识别技术识别出其中的股票，将其添加至当前分组；
+                </p>
+                <img src="img/help/h_img_05.png" class="desc_img" />
+                <a class="target-fix" name="c6"></a>
+                <h2 id="c6">添加自选股</h2>
+                <p class="_desc">
+                    添加自选股主要有两种途径：
+                    <br/>1、在个股实时行情界面右侧的个股信息面板，点击上方的“关注”按钮，即可把该股票添加到自选股列表中。
+                    <br/>2、通过“行情报价”界面，点击个股信息左边的“关注”按钮添加关注自选股。
+                    <br/>添加按钮再点一下取消，是从当前组取消,全部自选股里点添加会添加到默认分组里。
+                </p>
+                <img src="img/help/h_img_06.png" class="desc_img" />
+                <a class="target-fix" name="c7"></a>
+                <h2 id="c7">自选股分组</h2>
+                <p class="_desc">
+                    A、您可以对您的自选股进行分组管理，在自选股面板，点击菜单按钮>新建分组，即可新建一个自选股分组
+                    <br/>B、您可以通过点击菜单按钮>复制到或转移到，将改组的所有股票复制或转移到其他组
+                </p>
+                <img src="img/help/h_img_07.png" class="desc_img" />
+                <a class="target-fix" name="c8"></a>
+                <h2 id="c8">删除、移动、复制</h2>
+                <p class="_desc">
+                    如果我们需要对关注的个股进行管理，可以点击个股列表面板中个股右边的菜单按钮，展开菜单即可进行删除、移动、复制等操作
+                </p>
+                <img src="img/help/h_img_10.png" class="desc_img" />
+                <a class="target-fix" name="c9"></a>
+                <h2 id="c9">分享自选股分组</h2>
+                <p class="_desc" style="padding-bottom:20px;">
+                    您可以通过点击菜单旁的分享按钮分享当前自选股组，在弹出对话框中，您可以选择不同方式进行分享，如微信、微博、QQ、贴吧以及站内好友，或者将URL复制下来，粘贴给您的好友。
+                </p>
+                <img src="img/help/h_img_17.png" class="desc_img" />
+                <a class="target-fix" name="c10"></a>
+                <h2 id="c10">关注他人自选股</h2>
+                <p class="_desc" style="padding-bottom:20px;">
+                    您的好友收到您分享的链接点击进入后，点击上方的关注按钮，即可关注该好友分享来的自选股组。当您关注了好友的自选股组，您的自选股菜单中便多了一个来自您朋友的分组，您可以同步该组的变化。即如果您的好友在该组添加或删除了股票，您也可以同步地看到这个组的变化。
+                </p>
+                <img src="img/help/h_img_15.png" class="desc_img" />
+                <a class="target-fix" name="c11"></a>
+                <h2 id="c11">新闻、公告、研报</h2>
+                <p class="_desc">
+                    您可以在自选股列表面板下方展开新闻公告面板，这里面为推送最新的和您的自选股有关的新闻、公告和研报。
+                </p>
+                <img src="img/help/h_img_11.png" class="desc_img" />
+                <a class="target-fix" name="c12"></a>
+                <h2 id="c12">备注功能</h2>
+                <p class="_desc">
+                    备注功能同样位于自选股列表面板下方展开的新闻公告面板中，进入我们的在线行情系统之后，任何时候您需要记录信息，都可以打开这个面板添加备注，添加备注的时候输入#号即可插入股票代码，后续我们会围绕备注开发更多更强大的功能。
+                </p>
+                <img src="img/help/h_img_12.png" class="desc_img" />
+                <a class="target-fix" name="c13"></a>
+                <h2 id="c13">工具栏</h2>
+                <p class="_desc">
+                    您可以通过上方的按钮切换分时及不同周期的k线图，进行放大缩小或向左向右移动操作。
+                </p>
+                <img src="img/help/h_img_18.png" class="desc_img" />
+                <a class="target-fix" name="c14"></a>
+                <h2 id="c14">添加指标或叠加指数</h2>
+                <p class="_desc">
+                    您可以通过下方的工具栏叠加技术指标或大盘指数。点击高亮某指标，该指标将显示在图中；再次点击取消高亮，该指标将从图中消失，您也可以点击指标图表右上方的关闭按钮将其关闭。
+                </p>
+                <img src="img/help/h_img_19.png" class="desc_img" />
+                <a class="target-fix" name="c15"></a>
+                <h2 id="c15">修改指标 </h2>
+                <p class="_desc">
+                    您可以通过点击每个指标图上方的设置按钮（齿轮）调整指标参数。
+                </p>
+                <img src="img/help/h_img_21.png" class="desc_img" />
+                <a class="target-fix" name="c16"></a>
+                <h2 id="c16">K线图交互</h2>
+                <p class="_desc">
+                    A、上下键：您可以通过按键盘的上下键实现k线图及分时图的缩放；
+                    <br/>B、左右键：您可以通过左右键定位十字线；
+                    <br/>C、拖拽圈范围：您可以在k线图上圈一个范围，k线图将缩放至您所圈的范围。
+                </p>
+                <img src="img/help/h_img_20.png" class="desc_img" />
+                <a class="target-fix" name="c17"></a>
+                <h2 id="c17">个股信息栏</h2>
+                <p class="_desc">
+                    个股右侧显示这只股票的委托盘口、基本信息、资金流向、新闻、公告、研报、备注等信息
+                </p>
+                <img src="img/help/h_img_14.png" class="desc_img" />
+                <a class="target-fix" name="c18"></a>
+                <h2 id="c18">基本面分析 </h2>
+                <p class="_desc">
+                    您可以通过图左侧的tab切换到基本面分析页面，该页面将为您展示公司的基本信息、包括股东介绍、经营分析、财务指标等等。
+                </p>
+                <img src="img/help/h_img_08.png" class="desc_img" />
+                <a class="target-fix" name="c19"></a>
+                <h2 id="c19">按键精灵</h2>
+                <p class="_desc">
+                    按键精灵是我们的行情系统内置的一套快速操作行情系统的数字代号快捷键，只需要输入对应的数字代号，按下回车即可快速实现对应的功能。
+                </p>
+                <img src="img/help/h_img_22.png" class="desc_img" />
+                <a class="target-fix" name="c20"></a>
+                <h2 id="c20">通信功能</h2>
+                <p class="_desc">
+                    我们的在线行情系统中整合了社交通信功能，点击页面最右侧扩展功能面板最上方的“消息”图标即可展开面板。用户可以像普通社交通信产品一样，添加好友，组建群组，相互交流投资经验，基于通信功能，可以形成一个专属于股市投资的“朋友圈”，后续版本我们会继续优化社交功能。
+                    <br/>
+                    <br/>A、在消息中点击历史消息，可以继续之前的会话；
+                    <br/>B、在联系人中，点击联系人可以新建单人会话，点击讨论组可以建立讨论组会话；
+                    <br/>C、点击新增按钮可以添加联系人或者讨论组，也可以查看未处理的好友请求。
+                </p>
+                <img src="img/help/h_img_09.png" class="desc_img" />
+            </div>
+        </div>
+        <div class="_top" id="returnTop" style="position:fixed;bottom:10vh;right:10vw;">
+            <img class="rocket_img" src="img/ic_roket.svg" />
+        </div>
+    </div>
+</body>
+
+</html>

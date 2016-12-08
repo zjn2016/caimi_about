@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html style="background-color:#fff;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+    <link href="../images/favicon.ico" rel="bookmark" type="image/x-icon" />
+    <link href="../images/favicon.ico" rel="icon" type="image/x-icon" />
+    <link href="../images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <title>页面未找到</title>
+    <style type="text/css">
+        /*        以下为404错误页面 CSS*/
+        
+        html {
+            background: #fff!important;
+        }
+        
+        .btn_back_to_home {
+            display: block;
+            background-color: #97a3b1;
+            position: absolute;
+            width: 120px;
+            font-size: 16px;
+            line-height: 200%;
+            border-radius: 2px;
+            color: #fff;
+            bottom: 60px;
+            left: 220px;
+            text-decoration: none;
+        }
+        
+        .err_404 {
+            text-align: center;
+            width: 560px;
+            height: 300px;
+            position: relative;
+            background-image: url(img/img_404.png);
+            background-image: url(img/img_404.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            margin: 160px auto;
+            margin: 16vh auto;
+        }
+        
+        .back_to_home {
+            width: 100%;
+            font-size: 18px;
+            color: #515d6b;
+            position: absolute;
+            top: 62px;
+            margin: 0 auto;
+        }
+        
+        #time_count {
+            color: #ff2010;
+        }
+    </style>
+    <style type="text/css">
+        @-webkit-keyframes top_img {
+            from {
+                background-position: center 710px;
+                opacity: 0;
+            }
+            to {
+                background-position: center 200px;
+                opacity: 1;
+            }
+        }
+        
+        #container {
+            width: 100%;
+            max-width: 1040px;
+            margin: 0px auto;
+            padding: 60px 0px 40px 0px;
+        }
+    </style>
+</head>
+
+<script type="text/javascript">
+    var i = 10;
+    var intervalid;
+    intervalid = setInterval("fun()", 1000);
+
+    function fun() {
+        if (i == 0) {
+            window.location.href = "index.html";
+            clearInterval(intervalid);
+        }
+        document.getElementById("time_count").innerHTML = i;
+        i--;
+    }
+</script>
+
+<body>
+    <!--以下为404错误页 HTML 代码-->
+    <div id="container">
+        <div class="err_404">
+            <p class="back_to_home">页面不存在, <span id="time_count">10</span> 秒后返回首页</p>
+            <a class="btn_back_to_home" href="index.html">马上返回</a>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html style="background-color:#fff;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+    <link href="../images/favicon.ico" rel="bookmark" type="image/x-icon" />
+    <link href="../images/favicon.ico" rel="icon" type="image/x-icon" />
+    <link href="../images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <title>下载浏览器</title>
+    <style type="text/css">
+/*        以下为404错误页面 CSS*/
+        html{
+            background: #fff!important;
+        }
+        .browser_content{
+            width:100%;
+            margin:40px auto;
+            text-align: center;
+        }
+        .tips{
+            color: #515d6b;
+            font-size: 16px;
+            letter-spacing: 2px;
+            line-height: 200%;
+        }
+        .browsers{
+            margin: 20px;
+            text-align: center;
+        }
+        ._box{
+            display: inline-block;
+            width: 200px;
+        }
+        .br_ic{
+            width: 80px;
+        }
+        .br_name{
+            color: #515d6b;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        .go_dl{
+            display: block;
+            background-color: #fff;
+            font-size: 14px;
+            line-height: 200%;
+            color: #515d6b;
+            width: 100px;
+            border: solid #97a3b1 1px;
+            border-radius: 2px;
+            margin: 30px auto 0 auto;
+        }
+    </style>
+    <style type="text/css">
+        @-webkit-keyframes top_img {
+            from {
+                background-position: center 710px;
+                opacity: 0;
+            }
+            to {
+                background-position: center 200px;
+                opacity: 1;
+            }
+        }
+        
+        #container {
+            /*        text-align: center;*/
+            width: 100%;
+            max-width: 1040px;
+            margin: 0px auto;
+            padding: 60px 0px 40px 0px;
+            /*        background-color: #ccc;*/
+        }
+    </style>
+</head>
+<link rel="stylesheet" media="screen and (max-width: 1039px)" href="css/style_middle.css" type="text/css" />
+<link rel="stylesheet" media="screen and (min-width: 1040px)" href="css/style_large.css" type="text/css" />
+<script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/jquery-easing/1.3/jquery.easing.min.js"></script>
+    
+<!--
+<script type="text/javascript">
+    var i = 10;
+    var intervalid;
+    intervalid = setInterval("fun()", 1000);
+
+    function fun() {
+        if (i == 0) {
+            window.location.href = "index.html";
+            clearInterval(intervalid);
+        }
+        document.getElementById("time_count").innerHTML = i;
+        i--;
+    }
+</script>
+-->
+
+<body>
+    <header>
+        <div class="nav_bar" style="background-image: url(img/bg_img2.png);background-repeat: no-repeat;background-position: top center;background-size: auto;">
+            <div class="bg_opaccity"></div>
+            <div class="nav_bound">
+                <div class="web_logo"></div>
+                <ul class="nav">
+                    <li><a class="nav_links" href="index.html">首页</a></li>
+                    <li><a class="nav_links" href="help.html">帮助</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+<!--以下为404错误页 HTML 代码-->
+    <div id="container">
+        <div class="browser_content">
+            <p class="tips">当前浏览器存在不支持或不兼容问题<br/>
+建议使用下列浏览器访问以获得最优体验
+            </p>
+            <div class="browsers">
+                <div class="_box">
+                    <img class="br_ic" src="img/img_br_chrom.png" />
+                    <p class="br_name">谷歌Chrome(首选)</p>
+                    <a class="go_dl" href="http://dl.pconline.com.cn/download/63040.html" target="_blank">下载</a>
+                </div>                
+                <div class="_box">
+                    <img class="br_ic" src="img/img_br_qq.png" />
+                    <p class="br_name">QQ浏览器</p>
+                    <a class="go_dl" href="http://browser.qq.com/" target="_blank">下载</a>
+                </div>                
+                <div class="_box">
+                    <img class="br_ic" src="img/img_br_360.png" />
+                    <p class="br_name">360极速浏览器</p>
+                    <a class="go_dl" href="http://chrome.360.cn/" target="_blank">下载</a>
+                </div>                
+                <div class="_box">
+                    <img class="br_ic" src="img/img_br_sogou.png" />
+                    <p class="br_name">搜狗浏览器</p>
+                    <a class="go_dl" href="http://ie.sogou.com/" target="_blank">下载</a>
+                </div>
+            </div>            
+
+        </div>
+    </div>
+</body>
+
+</html>

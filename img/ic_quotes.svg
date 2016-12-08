@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.6.1 (26313) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_quotes</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-18">
+            <g id="ic_quotes">
+                <rect id="Rectangle-19" fill="#FFFFFF" opacity="0" x="0" y="0" width="100" height="100"></rect>
+                <path d="M20.2857143,23 L18,23 L18,74.8642857 L18,76 L81.4920635,76 L81.4920635,73.7285714 L20.2857143,73.7285714 L20.2857143,23 Z M24.8571429,43.3166667 L32.4761905,43.3166667 L32.4761905,71.5833333 L24.8571429,71.5833333 L24.8571429,43.3166667 Z M39.3333333,25.65 L46.952381,25.65 L46.952381,71.5833333 L39.3333333,71.5833333 L39.3333333,25.65 Z M53.8095238,37.1333333 L61.4285714,37.1333333 L61.4285714,71.5833333 L53.8095238,71.5833333 L53.8095238,37.1333333 Z M68.2857143,32.7166667 L75.9047619,32.7166667 L75.9047619,71.5833333 L68.2857143,71.5833333 L68.2857143,32.7166667 Z" id="Combined-Shape" fill="#97A3B1"></path>
+            </g>
+        </g>
+    </g>
+</svg>

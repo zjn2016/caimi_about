@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html style="background-color:#fff;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+    <link href="../images/favicon.ico" rel="bookmark" type="image/x-icon" />
+    <link href="../images/favicon.ico" rel="icon" type="image/x-icon" />
+    <link href="../images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <title>下载浏览器</title>
+    <style type="text/css">
+        /*        以下为404错误页面 CSS*/
+        
+        html {
+            background: #fff!important;
+        }
+        
+        .browser_content {
+            width: 100%;
+            margin: 40px auto;
+            text-align: center;
+        }
+        
+        .tips {
+            color: #515d6b;
+            font-size: 16px;
+            letter-spacing: 2px;
+            line-height: 200%;
+        }
+        
+        .browsers {
+            margin: 20px;
+            text-align: center;
+        }
+        
+        ._box {
+            display: inline-block;
+            width: 200px;
+        }
+        
+        .br_ic {
+            width: 80px;
+        }
+        
+        .br_name {
+            color: #515d6b;
+            font-size: 13px;
+/*            margin-top: 10px;*/
+        }
+        
+        .go_dl {
+            display: block;
+            background-color: #fff;
+            font-size: 14px;
+            line-height: 200%;
+            color: #515d6b;
+            width: 100px;
+            border: solid #97a3b1 1px;
+            border-radius: 2px;
+            cursor: pointer;
+            
+        }
+    </style>
+    <style type="text/css">
+        @-webkit-keyframes top_img {
+            from {
+                background-position: center 710px;
+                opacity: 0;
+            }
+            to {
+                background-position: center 200px;
+                opacity: 1;
+            }
+        }
+        
+        #container {
+            /*        text-align: center;*/
+            width: 100%;
+            max-width: 1040px;
+            margin: 0px auto;
+            padding: 60px 0px 40px 0px;
+            /*        background-color: #ccc;*/
+        }
+        
+        .s_detail {
+            display: inline-block;
+/*            width: 320px;*/
+            font-size: 14px;
+            color: #515d6b;
+            line-height: 150%;
+            float: left;
+        }
+        
+        .s_title {
+            font-size: 28px;
+            color: #07182C;
+            line-height: 200%;
+            margin-top: 40px;
+        }
+        
+        ._desc {
+            font-size: 14px;
+            color: #515d6b;
+            line-height: 200%;
+            letter-spacing: 2px;
+            text-align:left;
+            width: 660px;
+            margin: 0 auto 40px auto;
+        }
+        
+        .dl_img {
+            float: left;
+            width: 220px;
+        }
+        
+        .s_name {
+            font-size: 18px;
+            color: #07182C;
+            text-align: left;
+            line-height: 200%;
+            margin-top: 10px;
+        }
+        
+        ._info {
+            font-size: 13px;
+            color: #515d6b;
+            text-align: left;
+        }
+        
+        .dlbox {
+            display: inline-block;
+            height: 220px;
+        }
+        .br_img{
+            width: 48px;
+        }
+        .br_suport{
+            font-size: 14px;
+            color: #515d6b;
+            margin-top: 40px;
+        }
+        .br_box{
+            width: 120px;
+            display: inline-block;
+            cursor: pointer;
+            margin: 10px;
+        }
+        .br_content{
+            margin-top: 20px;
+        }
+        ._info{
+            
+        }
+        ._info_img{
+            position: absolute;
+            width: 16px;
+/*            margin-top: 10px;*/
+        }
+        ._info_desc{
+            display: inline-block;
+            font-size: 14px;
+            color: #515d6b;
+            line-height: 18px;
+            margin-left: 20px;
+        }
+        .warn_info{
+            position: relative;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<link rel="stylesheet" media="screen and (max-width: 1039px)" href="css/style_middle.css" type="text/css" />
+<link rel="stylesheet" media="screen and (min-width: 1040px)" href="css/style_large.css" type="text/css" />
+<script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+<!--
+<script type="text/javascript">
+    var i = 10;
+    var intervalid;
+    intervalid = setInterval("fun()", 1000);
+
+    function fun() {
+        if (i == 0) {
+            window.location.href = "index.html";
+            clearInterval(intervalid);
+        }
+        document.getElementById("time_count").innerHTML = i;
+        i--;
+    }
+</script>
+-->
+
+<body>
+    <header>
+        <div class="nav_bar" style="background-image: url(img/bg_img2.png);background-repeat: no-repeat;background-position: top center;background-size: auto;">
+            <div class="bg_opaccity"></div>
+            <div class="nav_bound">
+                <div class="web_logo"></div>
+                <ul class="nav">
+                    <li><a class="nav_links" href="index.html">首页</a></li>
+                    <li><a class="nav_links" href="help.html">帮助</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!--以下为404错误页 HTML 代码-->
+    <div id="container">
+       <div class=warn_info>
+           <img src="img/ic_exclamation.svg" alt="" class="_info_img">
+           <p class="_info_desc">由于您的浏览器版本太低或不兼容，建议您下载“财迷客户端”或者升级浏览器</p>
+       </div>
+        <p class="s_title">财迷客户端</p>
+        <p class="_desc">财迷客户端是一款基于HTML5技术的在线行情软件，用户安装我们的客户端之后可以不依赖于浏览器，无需输入网址，运行即可完美体验我们的在线行情系统。</p>
+        <div class="dl_content">
+            <div class="dlbox">
+                <img src="img/img_dl_win.png" alt="财迷 For Windows" class="dl_img">
+                <div class="s_detail">
+                    <div class="s_name">财迷 For Windows</div>
+                    <p class="_info">
+                        操作系统：Win7/Win8/Win10
+                        <br/> 软件语言：简体中文
+                        <br/> 软件体积：43.7MB
+                        <br/> 版本号：1.0
+                        <br/> 发布日期：2016年3月20日
+                    </p>
+                    <a href="http://7xs49u.dl1.z0.glb.clouddn.com/caimi_desktop.zip" class="go_dl" style="float:left;margin-top:10px;width:120px;">下载</a>
+                </div>
+            </div>            
+               <div class="dlbox">
+                <img src="img/img_dl_os.png" alt="财迷 For Mac OS" class="dl_img">
+                <div class="s_detail">
+                    <div class="s_name">财迷 For Mac OS</div>
+                    <p class="_info">
+                        操作系统：Mac OS 10.9及以上
+                        <br/> 软件语言：简体中文
+                        <br/> 软件体积：47.6MB
+                        <br/> 版本号：1.0
+                        <br/> 发布日期：2016年3月20日
+                    </p>
+                    <a href="http://7xs49u.dl1.z0.glb.clouddn.com/caimi.app.zip" class="go_dl" style="float:left;margin-top:10px;width:120px;" >下载</a>
+                </div>
+            </div>            
+        </div>
+        <p class="br_suport">通过以下浏览器访问也可获得最佳体验(点击图标下载)</p>
+        <div class="br_content">
+            <div class="br_box" onclick="window.open('http://dl.pconline.com.cn/download/63040.html')" target="_blank">
+                <img class="br_img" src="img/img_br_chrom.png" />
+                <p class="br_name">谷歌Chrome</p>
+            </div>            
+            <div class="br_box" onclick="window.open('http://browser.qq.com/')" target="_blank">
+                <img class="br_img" src="img/img_br_qq.png" />
+                <p class="br_name">QQ浏览器</p>
+            </div>            
+            <div class="br_box" onclick="window.open('http://chrome.360.cn/')" target="_blank">
+                <img class="br_img" src="img/img_br_360.png" />
+                <p class="br_name">360极速浏览器</p>
+            </div>            
+            <div class="br_box" onclick="window.open('http://ie.sogou.com/')" target="_blank">
+                <img class="br_img" src="img/img_br_sogou.png" />
+                <p class="br_name">搜狗浏览器</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
